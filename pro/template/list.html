@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<form method="POST" action="list">
+    {% csrf_token %}
+    ITEM1:<input type="text" name="n1"><br><br>
+    ITEM2:<input type="text" name="n2"><br><br>
+    ITEM3:<input type="text" name="n3"><br><Br>
+    <input type="submit" value="SHOW"><br><Br>
+</form>
+
+LIST IS {{v}}
+
+</body>
+</html>

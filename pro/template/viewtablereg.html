@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIEW</title>
+</head>
+<body>
+<form method="POST" action="update">
+    {% csrf_token %}
+<table>
+    <tr>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
+        <th>PROCESS</th>
+    </tr>
+    {% for i in li %}
+    <tr>
+        <input type="text" value="{{i.Username}}" name="n1" hidden>
+        <td contenteditable>{{i.Username}}</td>
+        <td><input type="text" value="{{i.Password}}" name="n2"></td>
+        <!--<td contenteditable>{{i.Password}}</td>-->
+        <td><input type="submit" value="UPDATE"></td>
+    </tr>
+    {% endfor %}
+
+
+    <tr>
+    {% for i in h %}
+        <td>{{i.Username}}</td>
+        <td>{{i.Password}}</td>
+        <td></td>
+    {% endfor %}
+    </tr>
+</table>
+</form>
+</body>
+</html>

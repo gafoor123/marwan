@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<center><h1><u>REGISTRATION FORM</u></h1></center>
+<center>
+<form method="POST" action="creation">
+    {% csrf_token %}
+    Name:<input type="text" name="n1"><br><Br>
+    Roll_no:<input type="text" name="n2"><br><Br>
+    Age:<input type="text" name="n3"><br><br>
+    Username:<input type="text" name="username"><br><br>
+    Password:<input type="text" name="password"><br><br>
+    <input type="submit" value="REGISTER"><br><Br><Br>
+</form>
+    <form method="POST" action="search">
+        {% csrf_token %}
+        USERNAME:<input type="text" name="n1">&nbsp &nbsp
+        <input type="submit" value="search">
+    </form>
+</center>
+</body>
+</html>
